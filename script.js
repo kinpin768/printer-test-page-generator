@@ -6,19 +6,25 @@ const testType = document.getElementById("test-type");
 
 const testPage = document.getElementById("test-page");
 
+
 generateButton.addEventListener("click", function () {
 
     const selectedPaper = paperSize.value;
     const selectedTest = testType.value;
 
+    // Paper size
     if (selectedPaper === "a4") {
         testPage.style.width = "210mm";
         testPage.style.minHeight = "297mm";
-    } else if (selectedPaper === "letter") {
+    }
+
+    if (selectedPaper === "letter") {
         testPage.style.width = "216mm";
         testPage.style.minHeight = "279mm";
     }
 
+
+    // BLACK & WHITE
     if (selectedTest === "black-white") {
 
         testPage.innerHTML = `
@@ -36,8 +42,6 @@ generateButton.addEventListener("click", function () {
                 <p>0123456789</p>
 
                 <div class="test-lines">
-                    <div></div>
-                    <div></div>
                     <div></div>
                     <div></div>
                     <div></div>
@@ -69,14 +73,6 @@ generateButton.addEventListener("click", function () {
                     <div></div>
                 </div>
 
-                <div class="alignment-test">
-                    <span>+</span>
-                    <span>+</span>
-                    <span>+</span>
-                    <span>+</span>
-                    <span>+</span>
-                </div>
-
             </div>
 
             <div class="test-page-footer">
@@ -84,7 +80,11 @@ generateButton.addEventListener("click", function () {
             </div>
         `;
 
-    } else if (selectedTest === "color") {
+    }
+
+
+    // COLOR
+    if (selectedTest === "color") {
 
         testPage.innerHTML = `
             <div class="test-page-header">
@@ -94,7 +94,7 @@ generateButton.addEventListener("click", function () {
 
             <div class="test-content">
 
-                <h3>Color Test</h3>
+                <h3>CMYK Color Test</h3>
 
                 <div class="color-test">
                     <div class="color-box black"></div>
@@ -103,7 +103,7 @@ generateButton.addEventListener("click", function () {
                     <div class="color-box yellow"></div>
                 </div>
 
-                <h3>Primary Color Test</h3>
+                <h3>Primary Colors</h3>
 
                 <div style="
                     display:grid;
@@ -111,9 +111,11 @@ generateButton.addEventListener("click", function () {
                     gap:10px;
                     margin:20px 0;
                 ">
+
                     <div style="height:80px;background:red;"></div>
                     <div style="height:80px;background:green;"></div>
                     <div style="height:80px;background:blue;"></div>
+
                 </div>
 
                 <h3>Sample Text</h3>
@@ -122,14 +124,6 @@ generateButton.addEventListener("click", function () {
                 <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
                 <p>0123456789</p>
 
-                <div class="alignment-test">
-                    <span>+</span>
-                    <span>+</span>
-                    <span>+</span>
-                    <span>+</span>
-                    <span>+</span>
-                </div>
-
             </div>
 
             <div class="test-page-footer">
@@ -137,7 +131,11 @@ generateButton.addEventListener("click", function () {
             </div>
         `;
 
-    } else if (selectedTest === "cmyk") {
+    }
+
+
+    // CMYK
+    if (selectedTest === "cmyk") {
 
         testPage.innerHTML = `
             <div class="test-page-header">
@@ -163,7 +161,9 @@ generateButton.addEventListener("click", function () {
                         align-items:center;
                         justify-content:center;
                         font-weight:bold;
-                    ">CYAN</div>
+                    ">
+                        CYAN
+                    </div>
 
                     <div style="
                         height:120px;
@@ -172,7 +172,9 @@ generateButton.addEventListener("click", function () {
                         align-items:center;
                         justify-content:center;
                         font-weight:bold;
-                    ">MAGENTA</div>
+                    ">
+                        MAGENTA
+                    </div>
 
                     <div style="
                         height:120px;
@@ -181,7 +183,9 @@ generateButton.addEventListener("click", function () {
                         align-items:center;
                         justify-content:center;
                         font-weight:bold;
-                    ">YELLOW</div>
+                    ">
+                        YELLOW
+                    </div>
 
                     <div style="
                         height:120px;
@@ -191,36 +195,15 @@ generateButton.addEventListener("click", function () {
                         align-items:center;
                         justify-content:center;
                         font-weight:bold;
-                    ">BLACK</div>
+                    ">
+                        BLACK
+                    </div>
 
                 </div>
 
-                <h3>Grayscale</h3>
-
-                <div class="grayscale">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-
-                <h3>Text Test</h3>
+                <h3>Sample Text</h3>
 
                 <p>CMYK printer calibration and color test</p>
-
-                <div class="alignment-test">
-                    <span>+</span>
-                    <span>+</span>
-                    <span>+</span>
-                    <span>+</span>
-                    <span>+</span>
-                </div>
 
             </div>
 
@@ -229,12 +212,16 @@ generateButton.addEventListener("click", function () {
             </div>
         `;
 
-    } else if (selectedTest === "grayscale") {
+    }
+
+
+    // GRAYSCALE
+    if (selectedTest === "grayscale") {
 
         testPage.innerHTML = `
             <div class="test-page-header">
                 <h2>Grayscale Printer Test</h2>
-                <p>Black to white gradient and grayscale quality test</p>
+                <p>Black to white grayscale quality test</p>
             </div>
 
             <div class="test-content">
@@ -278,17 +265,6 @@ generateButton.addEventListener("click", function () {
                     <div></div>
                     <div></div>
                     <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-
-                <div class="alignment-test">
-                    <span>+</span>
-                    <span>+</span>
-                    <span>+</span>
-                    <span>+</span>
-                    <span>+</span>
                 </div>
 
             </div>
@@ -302,7 +278,7 @@ generateButton.addEventListener("click", function () {
 
 });
 
+
 printButton.addEventListener("click", function () {
     window.print();
 });
-
