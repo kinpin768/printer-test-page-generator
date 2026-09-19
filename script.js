@@ -6,31 +6,22 @@ const testType = document.getElementById("test-type");
 
 const testPage = document.getElementById("test-page");
 
-
 generateButton.addEventListener("click", function () {
 
     const selectedPaper = paperSize.value;
     const selectedTest = testType.value;
 
-    // Set paper size
     if (selectedPaper === "a4") {
-
         testPage.style.width = "210mm";
         testPage.style.minHeight = "297mm";
-
     } else if (selectedPaper === "letter") {
-
         testPage.style.width = "216mm";
         testPage.style.minHeight = "279mm";
-
     }
 
-
-    // Black & White test
     if (selectedTest === "black-white") {
 
         testPage.innerHTML = `
-
             <div class="test-page-header">
                 <h2>Black & White Printer Test</h2>
                 <p>Black ink and print quality test</p>
@@ -40,17 +31,9 @@ generateButton.addEventListener("click", function () {
 
                 <h3>Text Sharpness Test</h3>
 
-                <p>
-                    ABCDEFGHIJKLMNOPQRSTUVWXYZ
-                </p>
-
-                <p>
-                    abcdefghijklmnopqrstuvwxyz
-                </p>
-
-                <p>
-                    0123456789
-                </p>
+                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                <p>abcdefghijklmnopqrstuvwxyz</p>
+                <p>0123456789</p>
 
                 <div class="test-lines">
                     <div></div>
@@ -74,7 +57,6 @@ generateButton.addEventListener("click", function () {
                 <h3>Grayscale Test</h3>
 
                 <div class="grayscale">
-
                     <div></div>
                     <div></div>
                     <div></div>
@@ -85,17 +67,14 @@ generateButton.addEventListener("click", function () {
                     <div></div>
                     <div></div>
                     <div></div>
-
                 </div>
 
                 <div class="alignment-test">
-
                     <span>+</span>
                     <span>+</span>
                     <span>+</span>
                     <span>+</span>
                     <span>+</span>
-
                 </div>
 
             </div>
@@ -103,17 +82,11 @@ generateButton.addEventListener("click", function () {
             <div class="test-page-footer">
                 Black & White Printer Test Page
             </div>
-
         `;
 
-    }
-
-
-    // Color test
-    else if (selectedTest === "color") {
+    } else if (selectedTest === "color") {
 
         testPage.innerHTML = `
-
             <div class="test-page-header">
                 <h2>Color Printer Test</h2>
                 <p>Color quality and ink test</p>
@@ -124,12 +97,10 @@ generateButton.addEventListener("click", function () {
                 <h3>Color Test</h3>
 
                 <div class="color-test">
-
                     <div class="color-box black"></div>
                     <div class="color-box cyan"></div>
                     <div class="color-box magenta"></div>
                     <div class="color-box yellow"></div>
-
                 </div>
 
                 <h3>Primary Color Test</h3>
@@ -140,46 +111,23 @@ generateButton.addEventListener("click", function () {
                     gap:10px;
                     margin:20px 0;
                 ">
-
-                    <div style="
-                        height:80px;
-                        background:red;
-                    "></div>
-
-                    <div style="
-                        height:80px;
-                        background:green;
-                    "></div>
-
-                    <div style="
-                        height:80px;
-                        background:blue;
-                    "></div>
-
+                    <div style="height:80px;background:red;"></div>
+                    <div style="height:80px;background:green;"></div>
+                    <div style="height:80px;background:blue;"></div>
                 </div>
 
                 <h3>Sample Text</h3>
 
-                <p>
-                    Color printer test page
-                </p>
-
-                <p>
-                    ABCDEFGHIJKLMNOPQRSTUVWXYZ
-                </p>
-
-                <p>
-                    0123456789
-                </p>
+                <p>Color printer test page</p>
+                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                <p>0123456789</p>
 
                 <div class="alignment-test">
-
                     <span>+</span>
                     <span>+</span>
                     <span>+</span>
                     <span>+</span>
                     <span>+</span>
-
                 </div>
 
             </div>
@@ -187,107 +135,11 @@ generateButton.addEventListener("click", function () {
             <div class="test-page-footer">
                 Color Printer Test Page
             </div>
-
         `;
 
-    }
-
-
-    // CMYK test
-    else if (selectedTest === "cmyk") {
-        // Grayscale test
-else if (selectedTest === "grayscale") {
-
-    testPage.innerHTML = `
-
-        <div class="test-page-header">
-            <h2>Grayscale Printer Test</h2>
-            <p>Black to white gradient and grayscale quality test</p>
-        </div>
-
-        <div class="test-content">
-
-            <h3>Grayscale Levels</h3>
-
-            <div class="grayscale">
-
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-
-            </div>
-
-            <h3>Black Density Test</h3>
-
-            <div style="
-                width:100%;
-                height:80px;
-                background:#000;
-                margin:20px 0;
-            "></div>
-
-            <h3>Sample Text</h3>
-
-            <p>
-                Grayscale printer test page
-            </p>
-
-            <p>
-                ABCDEFGHIJKLMNOPQRSTUVWXYZ
-            </p>
-
-            <p>
-                abcdefghijklmnopqrstuvwxyz
-            </p>
-
-            <p>
-                0123456789
-            </p>
-
-            <h3>Fine Lines</h3>
-
-            <div class="test-lines">
-
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-
-            </div>
-
-            <div class="alignment-test">
-
-                <span>+</span>
-                <span>+</span>
-                <span>+</span>
-                <span>+</span>
-                <span>+</span>
-
-            </div>
-
-        </div>
-
-        <div class="test-page-footer">
-            Grayscale Printer Test Page
-        </div>
-
-    `;
-
-}
+    } else if (selectedTest === "cmyk") {
 
         testPage.innerHTML = `
-
             <div class="test-page-header">
                 <h2>CMYK Printer Test</h2>
                 <p>Cyan, Magenta, Yellow and Black test</p>
@@ -311,9 +163,7 @@ else if (selectedTest === "grayscale") {
                         align-items:center;
                         justify-content:center;
                         font-weight:bold;
-                    ">
-                        CYAN
-                    </div>
+                    ">CYAN</div>
 
                     <div style="
                         height:120px;
@@ -322,9 +172,7 @@ else if (selectedTest === "grayscale") {
                         align-items:center;
                         justify-content:center;
                         font-weight:bold;
-                    ">
-                        MAGENTA
-                    </div>
+                    ">MAGENTA</div>
 
                     <div style="
                         height:120px;
@@ -333,9 +181,7 @@ else if (selectedTest === "grayscale") {
                         align-items:center;
                         justify-content:center;
                         font-weight:bold;
-                    ">
-                        YELLOW
-                    </div>
+                    ">YELLOW</div>
 
                     <div style="
                         height:120px;
@@ -345,16 +191,13 @@ else if (selectedTest === "grayscale") {
                         align-items:center;
                         justify-content:center;
                         font-weight:bold;
-                    ">
-                        BLACK
-                    </div>
+                    ">BLACK</div>
 
                 </div>
 
                 <h3>Grayscale</h3>
 
                 <div class="grayscale">
-
                     <div></div>
                     <div></div>
                     <div></div>
@@ -365,23 +208,18 @@ else if (selectedTest === "grayscale") {
                     <div></div>
                     <div></div>
                     <div></div>
-
                 </div>
 
                 <h3>Text Test</h3>
 
-                <p>
-                    CMYK printer calibration and color test
-                </p>
+                <p>CMYK printer calibration and color test</p>
 
                 <div class="alignment-test">
-
                     <span>+</span>
                     <span>+</span>
                     <span>+</span>
                     <span>+</span>
                     <span>+</span>
-
                 </div>
 
             </div>
@@ -389,16 +227,81 @@ else if (selectedTest === "grayscale") {
             <div class="test-page-footer">
                 CMYK Printer Test Page
             </div>
+        `;
 
+    } else if (selectedTest === "grayscale") {
+
+        testPage.innerHTML = `
+            <div class="test-page-header">
+                <h2>Grayscale Printer Test</h2>
+                <p>Black to white gradient and grayscale quality test</p>
+            </div>
+
+            <div class="test-content">
+
+                <h3>Grayscale Levels</h3>
+
+                <div class="grayscale">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+
+                <h3>Black Density Test</h3>
+
+                <div style="
+                    width:100%;
+                    height:80px;
+                    background:#000;
+                    margin:20px 0;
+                "></div>
+
+                <h3>Sample Text</h3>
+
+                <p>Grayscale printer test page</p>
+                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                <p>abcdefghijklmnopqrstuvwxyz</p>
+                <p>0123456789</p>
+
+                <h3>Fine Lines</h3>
+
+                <div class="test-lines">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+
+                <div class="alignment-test">
+                    <span>+</span>
+                    <span>+</span>
+                    <span>+</span>
+                    <span>+</span>
+                    <span>+</span>
+                </div>
+
+            </div>
+
+            <div class="test-page-footer">
+                Grayscale Printer Test Page
+            </div>
         `;
 
     }
 
 });
 
-
 printButton.addEventListener("click", function () {
-
     window.print();
-
 });
