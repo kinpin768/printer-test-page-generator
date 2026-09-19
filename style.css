@@ -283,3 +283,43 @@ body {
         box-shadow: none;
     }
 }
+@page {
+    size: A4;
+    margin: 0;
+}
+
+@media print {
+
+    html,
+    body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background: #fff;
+    }
+
+    .header,
+    .tool-box,
+    .preview-section > h2,
+    .footer {
+        display: none !important;
+    }
+
+    .preview-section {
+        margin: 0;
+        padding: 0;
+    }
+
+    .test-page {
+        width: 210mm !important;
+        height: 297mm !important;
+        min-height: 297mm !important;
+        margin: 0 !important;
+        padding: 15mm;
+        border: none;
+        box-shadow: none;
+        page-break-after: avoid;
+        break-after: avoid;
+        overflow: hidden;
+    }
+}
