@@ -305,3 +305,4 @@ generateButton.addEventListener("click", function () {
 printButton.addEventListener("click", function () {
     window.print();
 });
+
