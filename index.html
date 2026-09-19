@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Printer Test Page Generator</title>
+
+    <meta name="description"
+          content="Free online printer test page generator. Test black and white, color, CMYK, grayscale, and printer quality.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <h1>Printer Test Page Generator</h1>
+            <p>Generate a simple test page to check your printer quality.</p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="tool-box">
+
+            <h2>Create Your Printer Test Page</h2>
+
+            <div class="form-group">
+                <label for="paper-size">Paper Size</label>
+
+                <select id="paper-size">
+                    <option value="a4">A4</option>
+                    <option value="letter">Letter</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="test-type">Test Type</label>
+
+                <select id="test-type">
+                    <option value="black-white">Black & White</option>
+                    <option value="color">Color</option>
+                    <option value="cmyk">CMYK</option>
+                </select>
+            </div>
+
+            <div class="button-group">
+                <button id="generate-btn" type="button">
+                    Generate Test Page
+                </button>
+
+                <button id="print-btn" type="button">
+                    Print Test Page
+                </button>
+            </div>
+
+        </section>
+
+        <section class="preview-section">
+
+            <h2>Test Page Preview</h2>
+
+            <div id="test-page" class="test-page">
+
+                <div class="test-page-header">
+                    <h2>Printer Test Page</h2>
+                    <p>Check your printer's print quality</p>
+                </div>
+
+                <div class="test-content">
+
+                    <h3>Sample Text</h3>
+
+                    <p>
+                        ABCDEFGHIJKLMNOPQRSTUVWXYZ
+                    </p>
+
+                    <p>
+                        abcdefghijklmnopqrstuvwxyz
+                    </p>
+
+                    <p>
+                        0123456789
+                    </p>
+
+                    <div class="test-lines">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+
+                    <div class="color-test">
+
+                        <div class="color-box black"></div>
+                        <div class="color-box cyan"></div>
+                        <div class="color-box magenta"></div>
+                        <div class="color-box yellow"></div>
+
+                    </div>
+
+                    <div class="grayscale">
+
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+
+                    </div>
+
+                    <div class="alignment-test">
+
+                        <span>+</span>
+                        <span>+</span>
+                        <span>+</span>
+                        <span>+</span>
+                        <span>+</span>
+
+                    </div>
+
+                </div>
+
+                <div class="test-page-footer">
+                    Printer Test Page Generator
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+
+        <div class="container">
+            <p>
+                Free Printer Test Page Generator
+            </p>
+        </div>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
