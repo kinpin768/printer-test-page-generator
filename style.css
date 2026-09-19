@@ -285,17 +285,17 @@ body {
 }
 @page {
     size: A4;
-    margin: 0;
+    margin: 10mm;
 }
 
 @media print {
 
     html,
     body {
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        background: #fff;
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        background: #fff !important;
     }
 
     .header,
@@ -306,20 +306,20 @@ body {
     }
 
     .preview-section {
-        margin: 0;
-        padding: 0;
+        margin: 0 !important;
+        padding: 0 !important;
     }
 
     .test-page {
-        width: 210mm !important;
-        height: 297mm !important;
-        min-height: 297mm !important;
+        width: 100% !important;
+        height: 277mm !important;
+        min-height: 0 !important;
         margin: 0 !important;
-        padding: 15mm;
-        border: none;
-        box-shadow: none;
-        page-break-after: avoid;
-        break-after: avoid;
-        overflow: hidden;
+        padding: 10mm !important;
+        border: none !important;
+        box-shadow: none !important;
+        overflow: hidden !important;
+        page-break-after: avoid !important;
+        break-after: avoid !important;
     }
 }
