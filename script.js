@@ -195,6 +195,96 @@ generateButton.addEventListener("click", function () {
 
     // CMYK test
     else if (selectedTest === "cmyk") {
+        // Grayscale test
+else if (selectedTest === "grayscale") {
+
+    testPage.innerHTML = `
+
+        <div class="test-page-header">
+            <h2>Grayscale Printer Test</h2>
+            <p>Black to white gradient and grayscale quality test</p>
+        </div>
+
+        <div class="test-content">
+
+            <h3>Grayscale Levels</h3>
+
+            <div class="grayscale">
+
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+
+            </div>
+
+            <h3>Black Density Test</h3>
+
+            <div style="
+                width:100%;
+                height:80px;
+                background:#000;
+                margin:20px 0;
+            "></div>
+
+            <h3>Sample Text</h3>
+
+            <p>
+                Grayscale printer test page
+            </p>
+
+            <p>
+                ABCDEFGHIJKLMNOPQRSTUVWXYZ
+            </p>
+
+            <p>
+                abcdefghijklmnopqrstuvwxyz
+            </p>
+
+            <p>
+                0123456789
+            </p>
+
+            <h3>Fine Lines</h3>
+
+            <div class="test-lines">
+
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+
+            </div>
+
+            <div class="alignment-test">
+
+                <span>+</span>
+                <span>+</span>
+                <span>+</span>
+                <span>+</span>
+                <span>+</span>
+
+            </div>
+
+        </div>
+
+        <div class="test-page-footer">
+            Grayscale Printer Test Page
+        </div>
+
+    `;
+
+}
 
         testPage.innerHTML = `
 
